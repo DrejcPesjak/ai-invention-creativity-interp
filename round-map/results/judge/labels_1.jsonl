@@ -1,0 +1,84 @@
+{"sid": "P0025", "label": "BFS", "faithful": false, "note": "syntax error: unclosed parenthesis in queue.append, cannot run", "names_used": ["bfs"]}
+{"sid": "P0329", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0153", "label": "OTHER", "faithful": false, "note": "recursive path-carrying search with no visited/in-path check at all (only skips repeating the same direction index); recurses forever", "names_used": ["dfs"]}
+{"sid": "P0241", "label": "IDDFS", "faithful": true, "note": "depth limit capped at 99; visited un-marked on return", "names_used": ["dfs"]}
+{"sid": "P0601", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0057", "label": "X1", "faithful": true, "note": "visited removed on return; shuffle is dead code", "names_used": ["dfs"]}
+{"sid": "P0385", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0561", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0209", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states; references undefined 'path' (NameError) and reconstruction just walks straight along the facing direction", "names_used": ["bfs"]}
+{"sid": "P0505", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0433", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so the frontier blows up exponentially", "names_used": ["bfs"]}
+{"sid": "P0409", "label": "BIDIR", "faithful": false, "note": "meeting test and join are wrong: concatenates the two popped paths without them sharing/adjoining a cell", "names_used": ["bfs", "bidirectional search"]}
+{"sid": "P0633", "label": "X1", "faithful": false, "note": "start is duplicated in the returned path (initial path [start] plus path + [(r,c)])", "names_used": ["dfs"]}
+{"sid": "P0009", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0113", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0489", "label": "OTHER", "faithful": false, "note": "called Floyd-Warshall but uses a rows x cols grid-shaped dist table with a nonsensical triple-loop update; not all-pairs, not a valid search", "names_used": ["floyd-warshall"]}
+{"sid": "P0195", "label": "X1", "faithful": true, "note": "marks cell as wall and restores it on return", "names_used": ["dfs", "backtracking"]}
+{"sid": "P0065", "label": "DIJK", "faithful": true, "note": "heap key is path length (steps) only", "names_used": ["greedy best-first search"]}
+{"sid": "P0313", "label": "DEADEND", "faithful": true, "note": "index typo g[start[1]][start[0]+1] in the start-neighbour check", "names_used": []}
+{"sid": "P0593", "label": "DIJK", "faithful": true, "note": "heap key is path length (steps) only", "names_used": ["best-first search", "greedy"]}
+{"sid": "P0177", "label": "X2", "faithful": true, "note": "", "names_used": ["floyd-warshall"]}
+{"sid": "P0441", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0305", "label": "X1", "faithful": false, "note": "per-branch visited copies; returns new_path (one step) instead of the recursive result, so the returned path is truncated", "names_used": ["dfs"]}
+{"sid": "P0569", "label": "RELAX", "faithful": true, "note": "queue-less full-grid sweeps until no change, assigning distance once; reconstructs via parent links rather than walking numbers", "names_used": ["sweep"]}
+{"sid": "P0353", "label": "X1", "faithful": true, "note": "returns None instead of [] when no path", "names_used": ["dfs", "backtracking", "memoization"]}
+{"sid": "P0225", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs", "sweep"]}
+{"sid": "P0121", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0169", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0185", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0369", "label": "RANDOM", "faithful": false, "note": "self-avoiding random walk that returns [] at the first dead end (no restart or revisiting)", "names_used": []}
+{"sid": "P0089", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0137", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0321", "label": "BFS", "faithful": true, "note": "FIFO queue with distance relaxation and predecessor links", "names_used": ["bfs", "relaxation"]}
+{"sid": "P0529", "label": "OTHER", "faithful": false, "note": "greedy hill-climb: single walker steps to the unvisited neighbour with lowest Manhattan distance, no frontier or backtracking; gives up at dead ends", "names_used": ["greedy", "a*"]}
+{"sid": "P0161", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0265", "label": "X1", "faithful": false, "note": "goal is duplicated at the end of the returned path", "names_used": ["dfs"]}
+{"sid": "P0417", "label": "BFS", "faithful": true, "note": "", "names_used": ["breadth-first search"]}
+{"sid": "P0361", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0129", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0401", "label": "BIDIR", "faithful": false, "note": "join uses the stale path of the other side's previously popped node (undefined on first iteration), so halves do not connect", "names_used": ["bidirectional search"]}
+{"sid": "P0097", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0201", "label": "WALL", "faithful": false, "note": "turn-order table is inconsistent (duplicate/missing directions per facing), not a proper relative turn order", "names_used": []}
+{"sid": "P0625", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0249", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0233", "label": "OTHER", "faithful": false, "note": "recursive path-carrying search with no visited or in-path check; infinite recursion", "names_used": ["dfs"]}
+{"sid": "P0145", "label": "ASTAR", "faithful": false, "note": "priority is parent priority + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": ["a*"]}
+{"sid": "P0545", "label": "X2", "faithful": false, "note": "adjacency initialisation is a tautology, so every pair of free cells gets distance 1", "names_used": ["floyd-warshall"]}
+{"sid": "P0577", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0457", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0081", "label": "IDDFS", "faithful": true, "note": "depth limit capped at 99; visited un-marked on return; unused recursive helper misnamed bfs", "names_used": ["bfs", "dfs"]}
+{"sid": "P0217", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"]}
+{"sid": "P0393", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0473", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0345", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states; returns only the last two cells instead of the full path", "names_used": ["bfs"]}
+{"sid": "P0617", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs", "breadth-first search"]}
+{"sid": "P0257", "label": "X1", "faithful": true, "note": "visited removed on return; start itself never marked", "names_used": ["dfs"]}
+{"sid": "P0049", "label": "DFS", "faithful": false, "note": "assigns into grid strings (TypeError) and duplicates start in the path", "names_used": ["dfs"]}
+{"sid": "P0449", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0337", "label": "ASTAR", "faithful": false, "note": "priority is parent priority + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": ["a*"]}
+{"sid": "P0041", "label": "GREEDY", "faithful": false, "note": "start missing from came map: it gets a predecessor assigned, so reconstruction loops/KeyErrors", "names_used": []}
+{"sid": "P0001", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0521", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0377", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0537", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0033", "label": "BFS", "faithful": true, "note": "no wall check for start/goal", "names_used": []}
+{"sid": "P0073", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0641", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0017", "label": "BIDIR", "faithful": false, "note": "on meeting returns only one side's half path, never joined with the other", "names_used": ["bfs", "bidirectional search"]}
+{"sid": "P0193", "label": "JUNK", "faithful": false, "note": "uses 'visited' before definition (NameError); body is a single raster scan of the grid, no recognisable search", "names_used": ["backtrack"]}
+{"sid": "P0465", "label": "X1", "faithful": true, "note": "visited un-marked on return", "names_used": ["backtracking", "memoization"]}
+{"sid": "P0289", "label": "OTHER", "faithful": false, "note": "recursion with no visited or in-path check; infinite recursion", "names_used": ["dfs"]}
+{"sid": "P0281", "label": "X2", "faithful": false, "note": "initialises every pair of distinct free cells as adjacent (distance 1)", "names_used": ["floyd-warshall"]}
+{"sid": "P0553", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0297", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0148", "label": "RANDOM", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0481", "label": "WALL", "faithful": true, "note": "consistent relative turn order (actually left-hand; comments mislabel directions)", "names_used": []}
+{"sid": "P0105", "label": "WAVE", "faithful": true, "note": "distances spread from start with FIFO queue, then walk from goal along numbers decreasing by one; no predecessor links", "names_used": ["bfs", "relaxation"]}
+{"sid": "P0509", "label": "DFS", "faithful": false, "note": "stack search over (cell, facing) states with forward/turn-right moves; path reconstruction from the visited set is bogus", "names_used": ["dfs"]}
+{"sid": "P0273", "label": "DIJK", "faithful": false, "note": "no predecessor links; reconstruction picks any visited neighbour of a fixed cell (wrong path / infinite loop)", "names_used": []}
+{"sid": "P0513", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0497", "label": "BFS", "faithful": true, "note": "no wall check for start/goal", "names_used": []}
+{"sid": "P0425", "label": "ASTAR", "faithful": false, "note": "priority is parent priority + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": ["a*"]}
+{"sid": "P0609", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0585", "label": "GREEDY", "faithful": true, "note": "", "names_used": ["greedy best-first search"]}

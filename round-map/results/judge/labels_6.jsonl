@@ -1,0 +1,85 @@
+{"sid": "P0158", "label": "JUNK", "faithful": false, "note": "code cut off mid-statement in the path-following loop (was dead-end filling then follow)", "names_used": []}
+{"sid": "P0502", "label": "BFS", "faithful": true, "note": "runs BFS start->goal then a redundant goal->start BFS; no wall check on start/goal", "names_used": ["bfs"]}
+{"sid": "P0574", "label": "X1", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0086", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0150", "label": "BFS", "faithful": false, "note": "goal pre-marked visited so it is never enqueued; never finds a path", "names_used": ["bfs"]}
+{"sid": "P0510", "label": "WALL", "faithful": false, "note": "position+facing but tries straight first then successive rotations (and direction vectors mislabeled), not a real hand-on-wall rule", "names_used": []}
+{"sid": "P0294", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0518", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0390", "label": "BFS", "faithful": true, "note": "unused neighbour-count helper", "names_used": ["bfs"]}
+{"sid": "P0230", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0166", "label": "IDDFS", "faithful": false, "note": "probe never records the path; returns [start] on success; no visited check", "names_used": []}
+{"sid": "P0630", "label": "DEADEND", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0550", "label": "WALL", "faithful": false, "note": "turn helpers apply % 4 to a string/outside index -> TypeError on first step", "names_used": []}
+{"sid": "P0126", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"]}
+{"sid": "P0094", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0582", "label": "GREEDY", "faithful": false, "note": "start never put in came: start gets a predecessor/KeyError, path reconstruction loops or crashes", "names_used": []}
+{"sid": "P0214", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0238", "label": "DIJK", "faithful": false, "note": "heap by distance from goal, path by walking to any neighbour with smaller number; unvisited -1 cells count as smaller, early break leaves them", "names_used": ["dijkstra"]}
+{"sid": "P0342", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0070", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0494", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0006", "label": "OTHER", "faithful": false, "note": "Floyd-Warshall triple loop on a table with no edges initialised used as reachability gate (always inf -> returns []), then a BFS that would build the path", "names_used": ["floyd-warshall", "bfs"]}
+{"sid": "P0190", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0302", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0566", "label": "X1", "faithful": false, "note": "path already contains current cell and goal is appended again -> duplicated last cell", "names_used": ["dfs"]}
+{"sid": "P0326", "label": "BFS", "faithful": false, "note": "path is a flat list of ints, not (row, col) tuples; no wall check", "names_used": []}
+{"sid": "P0038", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0262", "label": "BIDIR", "faithful": false, "note": "meeting only detected if both queues pop the same cell at the same time; joined path duplicates meeting cell", "names_used": ["bfs", "bidirectional bfs"]}
+{"sid": "P0470", "label": "ASTAR", "faithful": false, "note": "priority = parent's priority + 1 + h, so heuristics accumulate instead of g + h", "names_used": ["a*"]}
+{"sid": "P0534", "label": "BFS", "faithful": false, "note": "path is a flat list of ints, not (row, col) tuples; no wall check", "names_used": []}
+{"sid": "P0446", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0622", "label": "BFS", "faithful": true, "note": "all-pairs tables are allocated but never filled (no triple loop); the path comes from a plain BFS", "names_used": ["bfs"]}
+{"sid": "P0182", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": []}
+{"sid": "P0204", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0054", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0062", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0382", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0358", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0334", "label": "IDDFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0638", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0022", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"]}
+{"sid": "P0614", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0102", "label": "X1", "faithful": false, "note": "backtracking dfs (visited un-marked) inside a loop whose growing max_depth is never passed, so not a real IDDFS; dfs defined at module level without grid/is_free -> NameError", "names_used": ["bfs", "dfs", "depth-limited search"]}
+{"sid": "P0014", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0454", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0198", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0206", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0609", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0438", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0542", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["dfs", "a*"]}
+{"sid": "P0486", "label": "BFS", "faithful": true, "note": "two independent BFS runs (second redundant, would be returned unreversed); no wall check on start/goal", "names_used": ["bfs"]}
+{"sid": "P0374", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0310", "label": "BFS", "faithful": false, "note": "two independent full BFS runs (no meeting), spliced so the result runs start->goal and back to start", "names_used": ["bfs"]}
+{"sid": "P0174", "label": "BIDIR", "faithful": false, "note": "goal-side half is not reversed when joining, giving an invalid path", "names_used": ["bfs"]}
+{"sid": "P0366", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0046", "label": "RELAX", "faithful": false, "note": "after the sweeps, predecessor links are set in the wrong direction so reconstruction returns just [goal]", "names_used": ["bellman-ford", "bfs"]}
+{"sid": "P0414", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0519", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0398", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0078", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0270", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0422", "label": "X1", "faithful": false, "note": "goal appended twice (path already contains current cell)", "names_used": ["dfs"]}
+{"sid": "P0350", "label": "X1", "faithful": false, "note": "start duplicated in returned path; no wall check on start/goal", "names_used": ["dfs"]}
+{"sid": "P0246", "label": "IDDFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0339", "label": "JUNK", "faithful": false, "note": "no search: scans the grid and only appends cells already in path, so always returns []", "names_used": ["bfs", "dfs"]}
+{"sid": "P0286", "label": "DFS", "faithful": false, "note": "path initialised as int 0 -> TypeError on first push; also odd no-reverse direction filter", "names_used": ["dfs"]}
+{"sid": "P0462", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0590", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"]}
+{"sid": "P0430", "label": "OTHER", "faithful": false, "note": "recursion with no visited or path check at all, only skips moving in the same direction index as the previous move; unbounded recursion", "names_used": ["dfs"]}
+{"sid": "P0318", "label": "X1", "faithful": false, "note": "start duplicated in returned path", "names_used": ["dfs"]}
+{"sid": "P0142", "label": "OTHER", "faithful": false, "note": "walks straight in one direction and rotates clockwise when blocked; the visited check returns [] right after the first turn", "names_used": []}
+{"sid": "P0598", "label": "BFS", "faithful": false, "note": "two independent full BFS runs, combined so that start is duplicated at the front", "names_used": ["bfs"]}
+{"sid": "P0526", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0118", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["a*"]}
+{"sid": "P0030", "label": "IDDFS", "faithful": false, "note": "goal appended twice; depth limit capped at 99", "names_used": ["dfs"]}
+{"sid": "P0134", "label": "X1", "faithful": false, "note": "goal appended twice (path already contains current cell)", "names_used": ["dfs"]}
+{"sid": "P0110", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"]}
+{"sid": "P0406", "label": "RELAX", "faithful": false, "note": "whole-grid sweeps keeping predecessor links; unreached cells (-1) also relax neighbours to 0, so distances and links are wrong", "names_used": ["bfs", "dijkstra", "wave"]}
+{"sid": "P0278", "label": "IDDFS", "faithful": false, "note": "goal appended twice; max depth only rows+cols", "names_used": ["dfs"]}
+{"sid": "P0558", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0254", "label": "IDDFS", "faithful": false, "note": "depth-limited dfs returns booleans and tests path == [start]/[goal] at depth 0; never yields a real path", "names_used": ["dfs"]}
+{"sid": "P0478", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0606", "label": "DFS", "faithful": false, "note": "path[-1] on empty list raises IndexError whenever no path exists", "names_used": ["dfs"]}
+{"sid": "P0397", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0222", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}

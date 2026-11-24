@@ -1,0 +1,18 @@
+{
+ "X1": {
+  "name": "recursive backtracking",
+  "letter": "R",
+  "mech": "Extend the current path one cell at a time by recursion, marking only the cells that are on the current path; when stuck, undo the last step (unmark that cell) and try the next direction.",
+  "pure_ok": false,
+  "pseudo": "1. if start or goal is a wall, return []\n2. path = []; on_path = empty set\n3. extend(cell): append cell to path and add it to on_path\n4.     if cell is goal, return true\n5.     for each free neighbour n of cell that is not in on_path: if extend(n) returns true, return true\n6.     remove cell from path and from on_path (so that other routes may use it again); return false\n7. if extend(start) returns true, return path; otherwise return []",
+  "f1": null
+ },
+ "X2": {
+  "name": "the Floyd-Warshall algorithm",
+  "letter": "F",
+  "mech": "Treat every free cell as a node and fill a table of distances between every pair of nodes by allowing each node in turn as an intermediate stop; then read the path from start to goal out of the table.",
+  "pure_ok": false,
+  "pseudo": "1. if start or goal is a wall, return []\n2. cells = list of all free cells; n = its length; idx = position of each cell in the list\n3. dist = n x n table of infinity; nxt = n x n table of None; dist[i][i] = 0; for adjacent cells i, j: dist[i][j] = 1 and nxt[i][j] = j\n4. for k in 0..n-1: for i in 0..n-1: for j in 0..n-1:\n5.     if dist[i][k] + dist[k][j] < dist[i][j]: dist[i][j] = dist[i][k] + dist[k][j]; nxt[i][j] = nxt[i][k]\n6. s = idx[start]; g = idx[goal]; if s != g and nxt[s][g] is None, return []\n7. path = [start]; while s != g: s = nxt[s][g]; append cells[s] to path\n8. return path",
+  "f1": null
+ }
+}

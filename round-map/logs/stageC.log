@@ -1,0 +1,14 @@
+wrote 13 prompts for stage C
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|▏         | 5/398 [00:00<00:08, 46.38it/s]Loading weights:  11%|█         | 44/398 [00:00<00:01, 241.30it/s]Loading weights:  20%|██        | 80/398 [00:00<00:01, 292.25it/s]Loading weights:  29%|██▊       | 114/398 [00:00<00:00, 309.79it/s]Loading weights:  37%|███▋      | 148/398 [00:00<00:00, 320.40it/s]Loading weights:  47%|████▋     | 188/398 [00:00<00:00, 346.38it/s]Loading weights:  56%|█████▌    | 223/398 [00:00<00:00, 346.03it/s]Loading weights:  65%|██████▍   | 258/398 [00:00<00:00, 338.44it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 457.15it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+/home/drew99/IJS/ai-invention-creativity-interp/round-map/results/stageC.jsonl: 16 done, 114 to do
+  batch 1/10 293s (total 337s) max_new=669
+  batch 2/10 268s (total 627s) max_new=613
+  batch 3/10 110s (total 797s) max_new=250
+  batch 4/10 163s (total 1020s) max_new=375
+  batch 5/10 171s (total 1287s) max_new=353
+  batch 6/10 161s (total 1470s) max_new=372
+  batch 7/10 238s (total 1784s) max_new=544
+  batch 8/10 159s (total 2153s) max_new=331
+  batch 9/10 304s (total 2458s) max_new=607
+  batch 10/10 252s (total 2716s) max_new=581

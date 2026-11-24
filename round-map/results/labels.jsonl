@@ -1,0 +1,643 @@
+{"sid": "P0000", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0001", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0002", "label": "BFS", "faithful": false, "note": "no visited record at all, cells are re-enqueued forever", "names_used": ["bfs"], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0003", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0004", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0005", "label": "GREEDY", "faithful": false, "note": "start missing from came map: start gets a predecessor, reconstruction loops forever / KeyError", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0006", "label": "OTHER", "faithful": false, "note": "Floyd-Warshall triple loop on a table with no edges initialised used as reachability gate (always inf -> returns []), then a BFS that would build the path", "names_used": ["floyd-warshall", "bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0007", "label": "X2", "faithful": true, "note": "", "names_used": ["floyd-warshall"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0008", "label": "WALL", "faithful": false, "note": "straight-else-turn-right walker with visited set; backtrack branch assigns r,c = path[-2],path[-1] (tuples) and logic is incoherent", "names_used": ["wall follower"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0009", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0010", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0011", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs", "breadth-first search"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0012", "label": "DEADEND", "faithful": true, "note": "dead-end filling (exactly one free neighbour), then BFS on what is left", "names_used": ["reverse search", "bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0013", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0014", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0015", "label": "IDDFS", "faithful": true, "note": "depth cap fixed at 99; no wall check", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0016", "label": "WALL", "faithful": true, "note": "right/forward/left/back relative to facing with step budget; is_free lacks a bounds check (edge slip)", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0017", "label": "BIDIR", "faithful": false, "note": "on meeting returns only one side's half path, never joined with the other", "names_used": ["bfs", "bidirectional search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0018", "label": "BFS", "faithful": false, "note": "path built as a flat list of ints instead of (row, col) tuples", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0019", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0020", "label": "RELAX", "faithful": true, "note": "", "names_used": ["relaxation"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0021", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0022", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0023", "label": "BFS", "faithful": true, "note": "distance matrix kept but path via parent links", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0024", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0025", "label": "BFS", "faithful": false, "note": "syntax error: unclosed parenthesis in queue.append, cannot run", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0026", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0027", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0028", "label": "DIJK", "faithful": true, "note": "key is path length (steps so far)", "names_used": ["best-first search", "greedy"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0029", "label": "X2", "faithful": false, "note": "adjacency test compares (row_i, col_j) instead of cell j, so the edge set is wrong", "names_used": ["floyd-warshall"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0030", "label": "IDDFS", "faithful": false, "note": "goal appended twice; depth limit capped at 99", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0031", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0032", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0033", "label": "BFS", "faithful": true, "note": "no wall check for start/goal", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0034", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0035", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0036", "label": "BIDIR", "faithful": false, "note": "join uses the visited sets instead of paths (reversed(set) / list + set), so it crashes on meeting", "names_used": ["bfs", "bidirectional search"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0037", "label": "X1", "faithful": false, "note": "path-only visited backtracking; start duplicated in returned path", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0038", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0039", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0040", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0041", "label": "GREEDY", "faithful": false, "note": "start missing from came map: it gets a predecessor assigned, so reconstruction loops/KeyErrors", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0042", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0043", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0044", "label": "WAVE", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0045", "label": "X1", "faithful": true, "note": "un-marks on return; shuffled neighbour order", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0046", "label": "RELAX", "faithful": false, "note": "after the sweeps, predecessor links are set in the wrong direction so reconstruction returns just [goal]", "names_used": ["bellman-ford", "bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0047", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0048", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0049", "label": "DFS", "faithful": false, "note": "assigns into grid strings (TypeError) and duplicates start in the path", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0050", "label": "BIDIR", "faithful": false, "note": "meeting cell duplicated when the two halves are joined", "names_used": ["bfs", "bidirectional search"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0051", "label": "RANDOM", "faithful": false, "note": "self-avoiding random walk that never checks for the goal; returns [] when stuck", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0052", "label": "X1", "faithful": true, "note": "recursive backtracking with 'not in path'; outer growing-depth loop exists but depth is never used as a limit, so not IDDFS", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0053", "label": "DFS", "faithful": true, "note": "shuffled neighbour order", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0054", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0055", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0056", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0057", "label": "X1", "faithful": true, "note": "visited removed on return; shuffle is dead code", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0058", "label": "BFS", "faithful": true, "note": "BFS run in both directions independently but only the forward result is used; goal tested before the free-cell check, no wall check", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0059", "label": "IDDFS", "faithful": true, "note": "exact-depth probes, depth capped at 99, no start-wall check", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0060", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0061", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0062", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0063", "label": "DIJK", "faithful": true, "note": "heap key is len(path) = steps so far", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0064", "label": "WAVE", "faithful": false, "note": "layer counter k is never initialised (UnboundLocalError)", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0065", "label": "DIJK", "faithful": true, "note": "heap key is path length (steps) only", "names_used": ["greedy best-first search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0066", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0067", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0068", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0069", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0070", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0071", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0072", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0073", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0074", "label": "X1", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0075", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0076", "label": "DFS", "faithful": true, "note": "shuffles an unused direction list; search order is fixed", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0077", "label": "X1", "faithful": false, "note": "path-only visited backtracking with 4 random direction draws (with replacement); goal appended twice", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0078", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0079", "label": "BFS", "faithful": false, "note": "FIFO with carried paths but no visited set (only not-in-path), so it enumerates all simple paths and blows up", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0080", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0081", "label": "IDDFS", "faithful": true, "note": "depth limit capped at 99; visited un-marked on return; unused recursive helper misnamed bfs", "names_used": ["bfs", "dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0082", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0083", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0084", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0085", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0086", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0087", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0088", "label": "BFS", "faithful": false, "note": "path comes from a correct BFS with parent links, but a bogus 'Floyd-Warshall' loop on the rows x cols table runs first and returns [] (or errors) in most cases", "names_used": ["floyd-warshall", "bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0089", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0090", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0091", "label": "WAVE", "faithful": false, "note": "walk indexes num[cell] with a tuple -> TypeError crash", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0092", "label": "X1", "faithful": true, "note": "start is not marked visited, tiny slip", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0093", "label": "X1", "faithful": true, "note": "", "names_used": ["backtrack"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0094", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0095", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0096", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0097", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0098", "label": "X1", "faithful": true, "note": "visited un-marked after the recursive call returns", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0099", "label": "OTHER", "faithful": false, "note": "single walker with a facing direction: goes straight, rotates clockwise when blocked, and aborts on any revisit (so it gives up at the first turn); not a real wall follower", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0100", "label": "BIDIR", "faithful": false, "note": "meeting test always checks cameB even when expanding side B (fires immediately, KeyError), and frontier/map update after each round is wrong", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0101", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0102", "label": "X1", "faithful": false, "note": "backtracking dfs (visited un-marked) inside a loop whose growing max_depth is never passed, so not a real IDDFS; dfs defined at module level without grid/is_free -> NameError", "names_used": ["bfs", "dfs", "depth-limited search"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0103", "label": "DFS", "faithful": false, "note": "returned path omits start", "names_used": ["dfs", "backtracking"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0104", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0105", "label": "WAVE", "faithful": true, "note": "distances spread from start with FIFO queue, then walk from goal along numbers decreasing by one; no predecessor links", "names_used": ["bfs", "relaxation"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0106", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0107", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0108", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0109", "label": "BIDIR", "faithful": false, "note": "on meeting returns only one side's half-path, never joins the two halves", "names_used": ["bidirectional bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0110", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0111", "label": "DIJK", "faithful": true, "note": "heap keyed by steps only; path rebuilt by walking distances down by one", "names_used": ["bellman-ford"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0112", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0113", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0114", "label": "DFS", "faithful": true, "note": "takes queue[0] and inserts new items at index 0, so the list is a LIFO stack; visited never un-marked", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0115", "label": "GREEDY", "faithful": true, "note": "", "names_used": ["greedy best-first search"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0116", "label": "DEADEND", "faithful": true, "note": "follow step just takes the first neighbour that is not the previous cell, no step cap; loops forever if cycles remain", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0117", "label": "RELAX", "faithful": false, "note": "grid sweeps relaxing distances from start, but a fixed number of sweeps (rows) instead of until no change; path via prev links; called Floyd-Warshall but is not", "names_used": ["floyd-warshall"], "judge": 3, "n_judges": 2, "judges_agree": true}
+{"sid": "P0118", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["a*"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0119", "label": "IDDFS", "faithful": false, "note": "dfs refers to max_depth which is local to iddfs -> NameError", "names_used": ["iddfs", "dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0120", "label": "DEADEND", "faithful": false, "note": "follow phase sets prev to the new cell instead of the old one, so it can step back and oscillate forever", "names_used": [], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0121", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0122", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0123", "label": "IDDFS", "faithful": true, "note": "no cycle check at all, depth capped at 100", "names_used": ["dfs", "iddfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0124", "label": "DIJK", "faithful": true, "note": "comment claims an estimate but the key is steps only", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0125", "label": "DEADEND", "faithful": false, "note": "dead-end filling then corridor follow; code cut off mid-statement", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0126", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0127", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0128", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0129", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0130", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0131", "label": "IDDFS", "faithful": false, "note": "limit is decremented while path length also grows (double counting), no cycle check, depth capped at 99", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0132", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0133", "label": "OTHER", "faithful": false, "note": "recursive depth-first with no visited record at all; recurses forever", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0134", "label": "X1", "faithful": false, "note": "goal appended twice (path already contains current cell)", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0135", "label": "BIDIR", "faithful": false, "note": "meeting test checks membership in the dict just written, so it breaks on first expansion with a cell missing from the other side (KeyError); fronts aliased", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0136", "label": "WAVE", "faithful": true, "note": "layered distance fill from goal, then descent walk from start", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0137", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0138", "label": "BFS", "faithful": false, "note": "FIFO over (cell, direction) states; path reconstruction is wrong (no predecessor links, loop never advances row/col)", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0139", "label": "X2", "faithful": false, "note": "distance table never gets adjacency edges, so all pairs stay inf; reconstruction also wrong", "names_used": ["floyd-warshall"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0140", "label": "DFS", "faithful": false, "note": "recursion with no visited record at all (not even the path); infinite recursion", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0141", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0142", "label": "OTHER", "faithful": false, "note": "walks straight in one direction and rotates clockwise when blocked; the visited check returns [] right after the first turn", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0143", "label": "DFS", "faithful": false, "note": "returned path duplicates start (starts with [start] and appends current cell again)", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0144", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0145", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 1, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0146", "label": "X1", "faithful": false, "note": "iterative path stack; on dead end pops then un-marks the new top instead of the popped cell, and indexes an empty path when exhausted", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0147", "label": "RELAX", "faithful": false, "note": "whole-grid sweeps writing distances, but not anchored at start or goal (first free cell gets 0); number walk can loop forever", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0148", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0149", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0150", "label": "BFS", "faithful": false, "note": "goal pre-marked visited so it is never enqueued; never finds a path", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0151", "label": "X1", "faithful": true, "note": "visited un-marked on return; start itself never marked so it can be re-entered", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0152", "label": "DFS", "faithful": false, "note": "recursive DFS with permanent visited, but only tries directions with index >= incoming direction, so the search is incomplete", "names_used": ["wall follower"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0153", "label": "OTHER", "faithful": false, "note": "recursive path-carrying search with no visited/in-path check at all (only skips repeating the same direction index); recurses forever", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0154", "label": "BIDIR", "faithful": false, "note": "on meeting returns only one side's half path, the halves are never joined", "names_used": ["bfs", "bidirectional search", "bidirectional bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0155", "label": "BFS", "faithful": true, "note": "", "names_used": ["breadth-first search"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0156", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0157", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0158", "label": "JUNK", "faithful": false, "note": "code cut off mid-statement in the path-following loop (was dead-end filling then follow)", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0159", "label": "DFS", "faithful": false, "note": "stack DFS whose visited marking is broken (inserts '*' near row end, never tested), so cells are re-pushed endlessly", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0160", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0161", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0162", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0163", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0164", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0165", "label": "DIJK", "faithful": true, "note": "key is steps+1 only; comment claims an estimate that is never added", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0166", "label": "IDDFS", "faithful": false, "note": "probe never records the path; returns [start] on success; no visited check", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0167", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0168", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0169", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0170", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0171", "label": "WALL", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0172", "label": "BFS", "faithful": false, "note": "bogus Floyd-Warshall-style loop on a rows x cols grid gates the result (returns [] wrongly); actual path search is BFS with predecessor links; no unreachable check in reconstruction", "names_used": ["floyd-warshall", "bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0173", "label": "DEADEND", "faithful": false, "note": "code cut off mid-statement in the follow phase", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0174", "label": "BIDIR", "faithful": false, "note": "goal-side half is not reversed when joining, giving an invalid path", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0175", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0176", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0177", "label": "X2", "faithful": true, "note": "", "names_used": ["floyd-warshall"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0178", "label": "WAVE", "faithful": true, "note": "distances from goal by BFS, then walk from start to a smaller-numbered neighbour", "names_used": ["dijkstra", "bfs", "greedy"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0179", "label": "DEADEND", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0180", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0181", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0182", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0183", "label": "X1", "faithful": true, "note": "no wall check", "names_used": ["backtracking"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0184", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0185", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0186", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0187", "label": "DFS", "faithful": true, "note": "iterative DFS with the path as stack and permanent visited marks; comment calls it BFS", "names_used": ["bfs", "breadth-first search"], "judge": 3, "n_judges": 2, "judges_agree": true}
+{"sid": "P0188", "label": "WALL", "faithful": false, "note": "position+facing, goes straight and turns right only when blocked; no wall-side turn and no step cap, loops forever", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0189", "label": "IDDFS", "faithful": true, "note": "growing depth limit around a depth-limited FIFO (BFS) search with predecessor links; limit capped at 99, no wall check", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0190", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0191", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0192", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0193", "label": "JUNK", "faithful": false, "note": "uses 'visited' before definition (NameError); body is a single raster scan of the grid, no recognisable search", "names_used": ["backtrack"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0194", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0195", "label": "X1", "faithful": true, "note": "marks cell as wall and restores it on return", "names_used": ["dfs", "backtracking"], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0196", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0197", "label": "RANDOM", "faithful": false, "note": "self-avoiding random walk: one random unvisited neighbour per step, no backtracking, gives up at the first dead end", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0198", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0199", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0200", "label": "X1", "faithful": false, "note": "marks/un-marks by assigning into grid strings (TypeError on immutable str); start also duplicated in path", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0201", "label": "WALL", "faithful": false, "note": "turn-order table is inconsistent (duplicate/missing directions per facing), not a proper relative turn order", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0202", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0203", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0204", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 2, "judges_agree": true}
+{"sid": "P0205", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0206", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0207", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0208", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["a*"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0209", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states; references undefined 'path' (NameError) and reconstruction just walks straight along the facing direction", "names_used": ["bfs"], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0210", "label": "BFS", "faithful": true, "note": "FIFO with carried paths; cells marked visited only when popped, so duplicates are enqueued (slow)", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0211", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0212", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0213", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0214", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0215", "label": "DIJK", "faithful": true, "note": "heap keyed by steps only; path rebuilt by walking distances down by one (no predecessor links)", "names_used": ["bellman-ford"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0216", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0217", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0218", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 2, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0219", "label": "WALL", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0220", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0221", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0222", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0223", "label": "X1", "faithful": false, "note": "iterative path-stack backtracking that never tests for the goal and un-marks the wrong cell; always returns [] or crashes", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0224", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0225", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs", "sweep"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0226", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0227", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0228", "label": "BFS", "faithful": false, "note": "BFS is launched from every unvisited free cell in raster order instead of from start; predecessor walk back to start crashes unless start happens to be the root", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0229", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0230", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0231", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 4, "n_judges": 2, "judges_agree": true}
+{"sid": "P0232", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0233", "label": "OTHER", "faithful": false, "note": "recursive path-carrying search with no visited or in-path check; infinite recursion", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0234", "label": "IDDFS", "faithful": false, "note": "depth-limited probe keeps no path and no visited check; returns just [start]", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0235", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0236", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0237", "label": "BFS", "faithful": true, "note": "keeps distances but path comes from predecessor links", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0238", "label": "DIJK", "faithful": false, "note": "heap by distance from goal, path by walking to any neighbour with smaller number; unvisited -1 cells count as smaller, early break leaves them", "names_used": ["dijkstra"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0239", "label": "BFS", "faithful": true, "note": "list.pop(0) with carried paths; no wall check on start/goal", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0240", "label": "X1", "faithful": false, "note": "visited removed on return (backtracking); path already contains goal and goal is appended again, so goal is duplicated", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0241", "label": "IDDFS", "faithful": true, "note": "depth limit capped at 99; visited un-marked on return", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0242", "label": "ASTAR", "faithful": false, "note": "'new_row not in came_from' tests an int against tuple keys, so every neighbour is always re-pushed and came_from gets cycles", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0243", "label": "X1", "faithful": false, "note": "path is built goal-first and returned without reversing (goal -> start order)", "names_used": ["dfs", "backtracking", "depth-first search"], "judge": 3, "n_judges": 2, "judges_agree": true}
+{"sid": "P0244", "label": "WALL", "faithful": false, "note": "position+facing, forward else turn right, never hugs a wall; visited set blocks revisits so it spins forever when boxed in", "names_used": ["wall follower"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0245", "label": "OTHER", "faithful": false, "note": "recursive depth-first trying directions relative to facing, with no visited record; recurses forever", "names_used": ["dfs", "backtracking"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0246", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0247", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states; no predecessor links, reconstruction loop never terminates", "names_used": ["bfs", "wall follower"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0248", "label": "WAVE", "faithful": true, "note": "queue distance fill from goal, then walk from start to smaller numbers", "names_used": ["dijkstra", "bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0249", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0250", "label": "IDDFS", "faithful": true, "note": "depth limit capped at 99, path-based visited check", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0251", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0252", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0253", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0254", "label": "IDDFS", "faithful": false, "note": "depth-limited dfs returns booleans and tests path == [start]/[goal] at depth 0; never yields a real path", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0255", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0256", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 0, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0257", "label": "X1", "faithful": true, "note": "visited removed on return; start itself never marked", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0258", "label": "X1", "faithful": false, "note": "goal appended twice in returned path (judges split on faithful; 11/46 passed)", "names_used": ["dfs"], "judge": 2, "n_judges": 2, "judges_agree": false, "adjudicated": true}
+{"sid": "P0259", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0260", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0261", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0262", "label": "BIDIR", "faithful": false, "note": "meeting only detected if both queues pop the same cell at the same time; joined path duplicates meeting cell", "names_used": ["bfs", "bidirectional bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0263", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, direction) states; no predecessor links, reconstruction is wrong", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0264", "label": "WAVE", "faithful": true, "note": "queue distance fill from start, descent walk from goal, no predecessor links", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0265", "label": "X1", "faithful": false, "note": "goal is duplicated at the end of the returned path", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0266", "label": "BIDIR", "faithful": false, "note": "meeting detected only on popped nodes and the two carried paths are joined although they do not end at the same cell", "names_used": ["bfs", "bidirectional search"], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0267", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0268", "label": "BFS", "faithful": true, "note": "marks visited on pop, so duplicates are enqueued (slow) but logic is BFS", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0269", "label": "DIJK", "faithful": true, "note": "", "names_used": ["best-first search", "greedy"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0270", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0271", "label": "DFS", "faithful": false, "note": "stack DFS without predecessor links; path reconstruction steps back along one direction and is wrong", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0272", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0273", "label": "DIJK", "faithful": false, "note": "no predecessor links; reconstruction picks any visited neighbour of a fixed cell (wrong path / infinite loop)", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0274", "label": "DFS", "faithful": false, "note": "recursive depth-first with no visited record of any kind, recurses forever", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0275", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0276", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0277", "label": "OTHER", "faithful": false, "note": "recursive depth-first with no visited record or path check at all; recurses forever", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0278", "label": "IDDFS", "faithful": false, "note": "goal appended twice; max depth only rows+cols", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0279", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0280", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0281", "label": "X2", "faithful": false, "note": "initialises every pair of distinct free cells as adjacent (distance 1)", "names_used": ["floyd-warshall"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0282", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0283", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0284", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0285", "label": "IDDFS", "faithful": false, "note": "limit starts at 100; goal appended twice in returned path; no start==goal / wall checks", "names_used": ["iddfs", "dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0286", "label": "DFS", "faithful": false, "note": "stack DFS; path initialised as int 0 so path + [...] raises TypeError; odd no-reverse direction filter", "names_used": ["dfs"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0287", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0288", "label": "X1", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated in the result", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0289", "label": "OTHER", "faithful": false, "note": "recursion with no visited or in-path check; infinite recursion", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0290", "label": "BFS", "faithful": true, "note": "", "names_used": ["width-first search", "wfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0291", "label": "RELAX", "faithful": false, "note": "grid sweeps relaxing distances from start, but a fixed number of sweeps (rows) instead of until no change; path via prev links; called Floyd-Warshall but is not", "names_used": ["floyd-warshall"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0292", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0293", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0294", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0295", "label": "X1", "faithful": true, "note": "returns None instead of [] when no path", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0296", "label": "BIDIR", "faithful": false, "note": "next_front is never assigned back to a frontier (only swapped), and meeting test always checks cameB even when expanding B", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0297", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0298", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0299", "label": "BFS", "faithful": true, "note": "cells marked visited only when popped, so duplicates are enqueued (slow)", "names_used": [], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0300", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0301", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0302", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0303", "label": "BFS", "faithful": false, "note": "no unreachable check: returns [goal] when there is no path; no wall check", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0304", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0305", "label": "X1", "faithful": false, "note": "per-branch visited copies; returns new_path (one step) instead of the recursive result, so the returned path is truncated", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0306", "label": "JUNK", "faithful": false, "note": "uses 'visited' before assignment (crashes); nested grid loops with no real search", "names_used": ["depth-first search", "backtracking"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0307", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0308", "label": "OTHER", "faithful": false, "note": "two independent full BFS runs (start->goal and goal->start), not meeting; splice of the two paths duplicates start, giving an invalid path", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0309", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0310", "label": "BFS", "faithful": false, "note": "two independent full BFS runs (no meeting), spliced so the result runs start->goal and back to start", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0311", "label": "BFS", "faithful": true, "note": "plain BFS start->goal (second goal->start run is never useful); no wall check", "names_used": ["bfs", "bidirectional search"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0312", "label": "DIJK", "faithful": true, "note": "heap key is len(path) = steps only", "names_used": ["best-first search"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0313", "label": "DEADEND", "faithful": true, "note": "index typo g[start[1]][start[0]+1] in the start-neighbour check", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0314", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0315", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0316", "label": "JUNK", "faithful": false, "note": "cut off mid-function inside a comment block; FIFO queue over (pos, direction) never finished, no path reconstruction", "names_used": ["bfs", "dfs", "wall follower"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0317", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0318", "label": "X1", "faithful": false, "note": "start duplicated in returned path", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0319", "label": "X1", "faithful": false, "note": "returned path duplicates start (path starts as [start] and current cell is appended again)", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0320", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0321", "label": "BFS", "faithful": true, "note": "FIFO queue with distance relaxation and predecessor links", "names_used": ["bfs", "relaxation"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0322", "label": "RELAX", "faithful": false, "note": "grid sweeps pushing distances from start, but only a fixed 'rows' number of sweeps (not until stable) and path taken from predecessor links; not Floyd-Warshall", "names_used": ["floyd-warshall"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0323", "label": "DFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0324", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0325", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["a*"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0326", "label": "BFS", "faithful": false, "note": "path is a flat list of ints, not (row, col) tuples; no wall check", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0327", "label": "DIJK", "faithful": true, "note": "prev overwritten on every push; path still valid", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0328", "label": "OTHER", "faithful": true, "note": "mixture: heap (steps-only, Dijkstra) distance fill from goal, then FIFO BFS from start restricted to decreasing distances with predecessor links", "names_used": ["dijkstra", "bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0329", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0330", "label": "WAVE", "faithful": true, "note": "distances spread from start, walk back from goal along numbers decreasing by one", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0331", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0332", "label": "BIDIR", "faithful": false, "note": "on meeting, both halves are rebuilt from the same predecessor map (get_path ignores its target), so the joined path is wrong", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0333", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": ["bfs", "breadth-first search"], "judge": 5, "n_judges": 2, "judges_agree": true}
+{"sid": "P0334", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0335", "label": "OTHER", "faithful": false, "note": "recursive DFS with no visited record and no in-path check; recurses forever", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0336", "label": "X1", "faithful": false, "note": "path already contains the cell and goal is appended again on arrival, so goal is duplicated", "names_used": ["backtracking"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0337", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 1, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0338", "label": "BFS", "faithful": true, "note": "single BFS from start despite the bidirectional comment", "names_used": ["bfs", "bidirectional search"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0339", "label": "JUNK", "faithful": false, "note": "no search: scans grid and only appends cells already in path, so never finds anything", "names_used": ["bfs", "dfs"], "judge": 3, "n_judges": 2, "judges_agree": true}
+{"sid": "P0340", "label": "BFS", "faithful": false, "note": "FIFO queue with carried paths but no global visited set (only 'not in path'), so it enumerates all simple paths and blows up", "names_used": ["greedy"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0341", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0342", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0343", "label": "RELAX", "faithful": false, "note": "whole-grid relaxation sweeps from start with predecessor links, but only `rows` sweeps instead of until convergence; called Floyd-Warshall", "names_used": ["floyd-warshall"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0344", "label": "BFS", "faithful": false, "note": "FIFO distance fill from start, then a second BFS from goal whose visit order is returned as the path; prev links never used", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0345", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states; returns only the last two cells instead of the full path", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0346", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0347", "label": "BFS", "faithful": false, "note": "FIFO queue with carried paths but no global visited set, only 'not in path': enumerates all simple paths", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0348", "label": "X1", "faithful": false, "note": "goal test is 'start == goal' instead of testing the path end, never finds the goal; no wall check", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0349", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0350", "label": "X1", "faithful": false, "note": "start duplicated in returned path; no wall check on start/goal", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0351", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0352", "label": "X2", "faithful": false, "note": "initialises every pair of distinct free cells to distance 1 instead of only adjacent ones, so path jumps straight to goal", "names_used": ["floyd-warshall"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0353", "label": "X1", "faithful": true, "note": "returns None instead of [] when no path", "names_used": ["dfs", "backtracking", "memoization"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0354", "label": "X1", "faithful": false, "note": "returned path has start twice and omits the goal", "names_used": ["backtracking", "dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0355", "label": "WAVE", "faithful": true, "note": "", "names_used": ["dijkstra", "bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0356", "label": "X1", "faithful": true, "note": "marks cells as walls and restores them on return", "names_used": ["dfs", "backtracking"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0357", "label": "X1", "faithful": false, "note": "iterative path stack with un-marking; never checks for goal, and removes the wrong cell from visited", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0358", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0359", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0360", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0361", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0362", "label": "DFS", "faithful": true, "note": "takes queue[0] and inserts new items at index 0, so the list is a LIFO stack; visited never un-marked", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0363", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0364", "label": "X2", "faithful": false, "note": "adjacency initialisation compares cells for equality instead of adjacency, so no edges exist and no path is ever found", "names_used": ["floyd-warshall"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0365", "label": "OTHER", "faithful": false, "note": "bogus 'Floyd-Warshall' on a rows x cols single-source matrix used as reachability gate (leaves goal inf / index errors), then BFS with parent links", "names_used": ["floyd-warshall", "bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0366", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0367", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0368", "label": "DFS", "faithful": false, "note": "visited never un-marked (so DFS, not backtracking); returned path omits the start cell", "names_used": ["backtracking"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0369", "label": "RANDOM", "faithful": false, "note": "self-avoiding random walk that returns [] at the first dead end (no restart or revisiting)", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0370", "label": "JUNK", "faithful": false, "note": "recursion never moves off start (calls itself with the same arguments); no actual search", "names_used": ["backtracking"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0371", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0372", "label": "BIDIR", "faithful": false, "note": "join concatenates the carried paths of the two popped nodes, which are not the paths to the meeting cell; result is not a valid path", "names_used": ["bfs", "bidirectional search"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0373", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0374", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0375", "label": "X1", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0376", "label": "DFS", "faithful": false, "note": "recursive search with no visited record or path check at all; infinite recursion", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0377", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0378", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0379", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0380", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0381", "label": "IDDFS", "faithful": false, "note": "uses undefined row/col and tests start == goal instead of current cell", "names_used": ["dfs", "depth-limited"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0382", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0383", "label": "BFS", "faithful": true, "note": "written as a two-front search, but the front update makes both fronts the same list, so only the start side ever expands: a level-by-level BFS from start that stops at the goal. Judge wrote BIDIR/unfaithful; relabelled by what it does.", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0384", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0385", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0386", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0387", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0388", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0389", "label": "BFS", "faithful": true, "note": "single forward BFS despite the bidirectional comment", "names_used": ["bidirectional bfs", "bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0390", "label": "BFS", "faithful": true, "note": "unused neighbour-count helper", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0391", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0392", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0393", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0394", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0395", "label": "X2", "faithful": false, "note": "distance table never gets adjacency edges, so all pairs stay inf; reconstruction also wrong", "names_used": ["floyd-warshall"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0396", "label": "IDDFS", "faithful": true, "note": "depth limit capped at an arbitrary 100", "names_used": ["dfs", "iddfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0397", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 2, "judges_agree": true}
+{"sid": "P0398", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0399", "label": "ASTAR", "faithful": false, "note": "heap key is steps+manhattan of the parent cell, not of the pushed cell (lagged f)", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0400", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0401", "label": "BIDIR", "faithful": false, "note": "join uses the stale path of the other side's previously popped node (undefined on first iteration), so halves do not connect", "names_used": ["bidirectional search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0402", "label": "X1", "faithful": false, "note": "start duplicated in the returned path (current cell appended to a path that already has it)", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0403", "label": "X1", "faithful": false, "note": "path carries start twice (dfs called with [start] and appends current cell again)", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0404", "label": "WAVE", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0405", "label": "X1", "faithful": false, "note": "path-only visited backtracking; goal appended twice in returned path", "names_used": ["backtrack"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0406", "label": "RELAX", "faithful": false, "note": "whole-grid sweeps keeping predecessor links; unreached cells (-1) also relax neighbours to 0, so distances and links are wrong", "names_used": ["bfs", "dijkstra", "wave"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0407", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0408", "label": "DIJK", "faithful": true, "note": "heap key is len(path) = steps only", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0409", "label": "BIDIR", "faithful": false, "note": "meeting test and join are wrong: concatenates the two popped paths without them sharing/adjoining a cell", "names_used": ["bfs", "bidirectional search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0410", "label": "DFS", "faithful": false, "note": "path[-1] on an empty path raises IndexError whenever no path exists", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0411", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0412", "label": "X1", "faithful": false, "note": "stack/path search that un-marks on retreat but never tests for the goal, so it never returns a path; visited.remove(None) crash when the path empties", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0413", "label": "BFS", "faithful": true, "note": "marks visited on pop, so many duplicate queue entries (slow)", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0414", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0415", "label": "BIDIR", "faithful": false, "note": "swaps fronts and came dicts every round while also picking by size; meeting test hits own dict, path joins are wrong", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0416", "label": "RELAX", "faithful": false, "note": "not Floyd-Warshall: single-source grid sweeps repeated only `rows` times (not until convergence), path via prev links; long paths not fully relaxed", "names_used": ["floyd-warshall"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0417", "label": "BFS", "faithful": true, "note": "", "names_used": ["breadth-first search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0418", "label": "IDDFS", "faithful": true, "note": "no wall check on start/goal", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0419", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0420", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0421", "label": "X2", "faithful": false, "note": "table is right but reconstruction does not require adjacency (i=start or i=current satisfy the test): non-contiguous path or infinite loop", "names_used": ["floyd-warshall"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0422", "label": "X1", "faithful": false, "note": "goal appended twice (path already contains current cell)", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0423", "label": "GREEDY", "faithful": false, "note": "path_dict is overwritten with a single entry on every push, so reconstruction is wrong/NameError", "names_used": ["greedy best-first search"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0424", "label": "BFS", "faithful": true, "note": "no wall check on start/goal (edge-case slip)", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0425", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 1, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0426", "label": "X2", "faithful": true, "note": "", "names_used": ["floyd-warshall"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0427", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0428", "label": "IDDFS", "faithful": false, "note": "goal test is 'start == goal' instead of testing the path end, so it never finds the goal", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0429", "label": "DFS", "faithful": false, "note": "LIFO stack over (cell, facing) states, never un-marked; reconstruction compares 2-tuples to 3-tuple visited set and cannot work", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0430", "label": "OTHER", "faithful": false, "note": "recursion with no visited or path check at all, only skips moving in the same direction index as the previous move; unbounded recursion", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0431", "label": "OTHER", "faithful": false, "note": "two independent full BFS runs (start->goal and goal->start) spliced at a shared cell; splice picks the goal, so returned path goes to goal and back to start", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0432", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0433", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so the frontier blows up exponentially", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0434", "label": "X1", "faithful": false, "note": "goal test is 'start == goal' instead of the current cell, so it never succeeds", "names_used": ["backtracking"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0435", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0436", "label": "DIJK", "faithful": true, "note": "key is path length (steps so far)", "names_used": ["best-first search", "greedy"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0437", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0438", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0439", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0440", "label": "IDDFS", "faithful": false, "note": "limit is incremented together with the path on each recursive call so it never cuts off; effectively 'not in path' backtracking (X1); max depth only rows+cols", "names_used": ["iddfs", "iterative deepening", "dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0441", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0442", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0443", "label": "ASTAR", "faithful": false, "note": "heap ordered by g+h but no predecessor links; path reconstruction is arithmetic nonsense", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0444", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0445", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0446", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0447", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0448", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0449", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0450", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0451", "label": "BFS", "faithful": false, "note": "path reconstruction stops before start, so returned path lacks the start cell", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0452", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0453", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0454", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0455", "label": "DFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0456", "label": "IDDFS", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated; also no cycle check at all", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0457", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0458", "label": "X1", "faithful": true, "note": "no wall check on start/goal", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0459", "label": "X2", "faithful": false, "note": "Floyd-Warshall table has no adjacency edges so start-goal distance is always inf and it returns []; the BFS after it is never reached", "names_used": ["floyd-warshall", "bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0460", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0461", "label": "X2", "faithful": false, "note": "adjacency edges never initialised, so all distances stay inf and it returns []", "names_used": ["floyd-warshall"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0462", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0463", "label": "BFS", "faithful": true, "note": "no wall check on start", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0464", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0465", "label": "X1", "faithful": true, "note": "visited un-marked on return", "names_used": ["backtracking", "memoization"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0466", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0467", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0468", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0469", "label": "X1", "faithful": false, "note": "iterative path stack un-marking cells on pop; never checks for goal, so never returns a path", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0470", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 6, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0471", "label": "IDDFS", "faithful": false, "note": "depth-limited probe with growing limit but no path is recorded; returns [start]; no visited at all", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0472", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0473", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0474", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0475", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0476", "label": "X1", "faithful": false, "note": "marks visited by splicing ' #' (two characters) into the row string, corrupting columns; path also duplicates start", "names_used": ["dfs", "backtracking"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0477", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0478", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0479", "label": "X1", "faithful": true, "note": "outer loop over depth but depth is never used as a limit; it just repeats the same path-only backtracking", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0480", "label": "IDDFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0481", "label": "WALL", "faithful": true, "note": "consistent relative turn order (actually left-hand; comments mislabel directions)", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0482", "label": "DIJK", "faithful": true, "note": "heap key is steps so far", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0483", "label": "DIJK", "faithful": true, "note": "key is path length (steps so far); comment calls it greedy best-first", "names_used": ["greedy best-first search"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0484", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0485", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0486", "label": "BFS", "faithful": true, "note": "two independent BFS runs (second redundant, would be returned unreversed); no wall check on start/goal", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0487", "label": "OTHER", "faithful": false, "note": "walks straight, rotates when blocked, returns [] on first revisit; not a hand-on-wall rule (judges split WALL/OTHER)", "names_used": [], "judge": 0, "n_judges": 2, "judges_agree": false, "adjudicated": true}
+{"sid": "P0488", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0489", "label": "OTHER", "faithful": false, "note": "called Floyd-Warshall but uses a rows x cols grid-shaped dist table with a nonsensical triple-loop update; not all-pairs, not a valid search", "names_used": ["floyd-warshall"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0490", "label": "BIDIR", "faithful": false, "note": "meet test is always 'in cameB' (true immediately when expanding B side); fronts swapped without maps, new front never used", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0491", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0492", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": ["bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0493", "label": "BFS", "faithful": false, "note": "FIFO with carried paths but no visited set, plus ad hoc marking of dead-end cells as walls; revisits blow up and path lists are mutated", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0494", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0495", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0496", "label": "OTHER", "faithful": false, "note": "iterative path-stack walk with visited; on dead end pops and un-marks the wrong cell (new top); never tests for goal, always returns [] or crashes", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0497", "label": "BFS", "faithful": true, "note": "no wall check for start/goal", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0498", "label": "X2", "faithful": true, "note": "", "names_used": ["floyd-warshall"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0499", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0500", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0501", "label": "X1", "faithful": false, "note": "path-only visited backtracking; goal appended twice in returned path", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0502", "label": "BFS", "faithful": true, "note": "runs BFS start->goal then a redundant goal->start BFS; no wall check on start/goal", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0503", "label": "DFS", "faithful": true, "note": "recursive DFS with permanent visited set; random imported but unused", "names_used": ["random walk", "backtracking", "dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0504", "label": "X1", "faithful": true, "note": "recursive search that removes cell from visited on return", "names_used": ["random walk", "backtracking", "dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0505", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0506", "label": "BFS", "faithful": false, "note": "two complete independent BFS runs (start->goal, goal->start), then a wrong splice that returns just [start]", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0507", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0508", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0509", "label": "DFS", "faithful": false, "note": "stack search over (cell, facing) states with forward/turn-right moves; path reconstruction from the visited set is bogus", "names_used": ["dfs"], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0510", "label": "WALL", "faithful": false, "note": "position+facing but tries straight first then successive rotations (and direction vectors mislabeled), not a real hand-on-wall rule", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0511", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0512", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0513", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0514", "label": "IDDFS", "faithful": false, "note": "goal cell appended twice in returned path (path already contains it)", "names_used": ["dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0515", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0516", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0517", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0518", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0519", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 2, "judges_agree": true}
+{"sid": "P0520", "label": "WALL", "faithful": false, "note": "position+direction walker: forward else one right turn, gives up with [] if that is blocked too; no real wall-hugging order", "names_used": ["wall follower"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0521", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0522", "label": "IDDFS", "faithful": false, "note": "returns undefined variable 'path' (NameError) when a path is found", "names_used": ["iddfs", "iterative deepening depth-first search", "dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0523", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0524", "label": "DIJK", "faithful": false, "note": "no predecessor tracking; path reconstruction is a placeholder that loops forever", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0525", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 5, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0526", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0527", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0528", "label": "DEADEND", "faithful": true, "note": "dead-end filling then follow avoiding previous cell; can cycle forever when loops remain", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0529", "label": "OTHER", "faithful": false, "note": "greedy hill-climb: single walker steps to the unvisited neighbour with lowest Manhattan distance, no frontier or backtracking; gives up at dead ends", "names_used": ["greedy", "a*"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0530", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0531", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0532", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0533", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0534", "label": "BFS", "faithful": false, "note": "path is a flat list of ints, not (row, col) tuples; no wall check", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0535", "label": "IDDFS", "faithful": true, "note": "depth-limited DFS with path-only visited (un-marked on return), growing limit", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0536", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0537", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0538", "label": "BFS", "faithful": true, "note": "", "names_used": ["breadth-first search"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0539", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 3, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0540", "label": "DFS", "faithful": false, "note": "stack search whose visited marking is immediately reverted (no effective visited) and assigns into an immutable string row, so it crashes", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0541", "label": "IDDFS", "faithful": true, "note": "per-path visited sets; no wall check on start/goal", "names_used": ["dfs", "depth limit"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0542", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["dfs", "a*"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0543", "label": "BFS", "faithful": false, "note": "reconstructed path omits start", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0544", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0545", "label": "X2", "faithful": false, "note": "adjacency initialisation is a tautology, so every pair of free cells gets distance 1", "names_used": ["floyd-warshall"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0546", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0547", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0548", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0549", "label": "WAVE", "faithful": true, "note": "numbers spread from start via FIFO, path walked back from goal along numbers decreasing by one; no predecessor links", "names_used": ["bfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0550", "label": "WALL", "faithful": false, "note": "turn helpers apply % 4 to a string/outside index -> TypeError on first step", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0551", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0552", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0553", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0554", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0555", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0556", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0557", "label": "DFS", "faithful": false, "note": "visited never un-marked; start never appended so returned path lacks start", "names_used": ["backtracking"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0558", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0559", "label": "WALL", "faithful": true, "note": "direction comments mislabeled but consistent turn order relative to facing", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0560", "label": "X1", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated in the result", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0561", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0562", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0563", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0564", "label": "GREEDY", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 2, "judges_agree": true}
+{"sid": "P0565", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0566", "label": "X1", "faithful": false, "note": "path already contains current cell and goal is appended again -> duplicated last cell", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0567", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0568", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0569", "label": "RELAX", "faithful": true, "note": "queue-less full-grid sweeps until no change, assigning distance once; reconstructs via parent links rather than walking numbers", "names_used": ["sweep"], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0570", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0571", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": [], "judge": 3, "n_judges": 2, "judges_agree": true, "adjudicated": true}
+{"sid": "P0572", "label": "WALL", "faithful": false, "note": "initial facing is 'none' for any in-bounds start, so turn() returns no directions and it never moves", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0573", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 0, "n_judges": 2, "judges_agree": true}
+{"sid": "P0574", "label": "X1", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0575", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0576", "label": "WALL", "faithful": false, "note": "position+direction walker: go straight else rotate clockwise, blocked by a visited set so it spins forever when stuck; path omits start", "names_used": ["wall follower"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0577", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0578", "label": "BIDIR", "faithful": false, "note": "meet test 'in cameB' is trivially true when the B side is the one being expanded; new front never used", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0579", "label": "OTHER", "faithful": true, "note": "best-first on a heap whose key is parent's key + 1 + h(new cell): the heuristic is accumulated along the path, so it is neither g+h (A*) nor h (greedy). Judges wrote ASTAR/unfaithful; relabelled by the main judge after reading P0337.", "names_used": ["a*"], "judge": 3, "n_judges": 1, "judges_agree": true, "adjudicated": true}
+{"sid": "P0580", "label": "RELAX", "faithful": true, "note": "", "names_used": ["relaxation"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0581", "label": "DEADEND", "faithful": false, "note": "code cut off mid-statement in the follow phase", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0582", "label": "GREEDY", "faithful": false, "note": "start never put in came: start gets a predecessor/KeyError, path reconstruction loops or crashes", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0583", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0584", "label": "WALL", "faithful": false, "note": "straight-else-rotate-clockwise walker; appends current cell on every iteration including pure turns, so path has duplicates; can loop forever", "names_used": ["wall follower"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0585", "label": "GREEDY", "faithful": true, "note": "", "names_used": ["greedy best-first search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0586", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0587", "label": "GREEDY", "faithful": true, "note": "heap key (h, g, cell): h compared first", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0588", "label": "DFS", "faithful": false, "note": "list used as a stack via insert(0), but pop(0) removes the last-inserted neighbour instead of the current node, so nodes are dropped", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0589", "label": "X1", "faithful": true, "note": "un-marks on return", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0590", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0591", "label": "GREEDY", "faithful": true, "note": "", "names_used": ["greedy best-first search"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0592", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0593", "label": "DIJK", "faithful": true, "note": "heap key is path length (steps) only", "names_used": ["best-first search", "greedy"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0594", "label": "IDDFS", "faithful": false, "note": "depth-limited probe keeps no path and no visited check; returns just [start]", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0595", "label": "IDDFS", "faithful": false, "note": "outer growing-depth loop but dfs always called with depth 1 and the limit test never triggers: plain backtracking (X1 behaviour) repeated", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0596", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0597", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0598", "label": "BFS", "faithful": false, "note": "two independent full BFS runs, combined so that start is duplicated at the front", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0599", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0600", "label": "IDDFS", "faithful": false, "note": "outer loop grows depth_limit but dfs never uses it; effectively plain 'not in path' backtracking (X1) repeated", "names_used": ["dfs", "depth limit"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0601", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0602", "label": "RANDOM", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0603", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0604", "label": "WAVE", "faithful": true, "note": "", "names_used": ["dijkstra", "bfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0605", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0606", "label": "DFS", "faithful": false, "note": "path[-1] on empty list raises IndexError whenever no path exists", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0607", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0608", "label": "ASTAR", "faithful": true, "note": "heap key steps+manhattan; visited marked on push", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0609", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 2, "judges_agree": true}
+{"sid": "P0610", "label": "X1", "faithful": false, "note": "returned path omits the goal cell", "names_used": ["backtracking", "dfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0611", "label": "IDDFS", "faithful": false, "note": "outer growing-depth loop but limit test compares depth to len(path)+1, so limit never bites: depth=1 run is plain unbounded backtracking (X1 behaviour), later runs return at once", "names_used": ["dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0612", "label": "X1", "faithful": false, "note": "path is seeded with start and the current cell is appended again on each call, so the returned path has duplicated cells", "names_used": ["dfs"], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0613", "label": "DIJK", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0614", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0615", "label": "JUNK", "faithful": false, "note": "NameError on undefined `steps`; body is a raster scan with no recognisable search", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0616", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0617", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs", "breadth-first search"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0618", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0619", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states with no predecessor links; path reconstruction loop never terminates (unfinished)", "names_used": ["bfs", "dfs"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0620", "label": "BFS", "faithful": true, "note": "no wall check on start/goal", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0621", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0622", "label": "BFS", "faithful": true, "note": "all-pairs tables are allocated but never filled (no triple loop); the path comes from a plain BFS", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0623", "label": "RELAX", "faithful": true, "note": "sweeps until no change; path via predecessor links rather than number walk", "names_used": ["bellman-ford"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0624", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0625", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0626", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"], "judge": 2, "n_judges": 2, "judges_agree": true}
+{"sid": "P0627", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0628", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0629", "label": "X1", "faithful": false, "note": "path-only visited backtracking; start duplicated in returned path", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0630", "label": "DEADEND", "faithful": true, "note": "", "names_used": [], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0631", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0632", "label": "BIDIR", "faithful": false, "note": "new_front is never assigned back to a frontier (only swapped), and meeting test always checks cameB even when expanding B", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0633", "label": "X1", "faithful": false, "note": "start is duplicated in the returned path (initial path [start] plus path + [(r,c)])", "names_used": ["dfs"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0634", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}
+{"sid": "P0635", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs", "iterative deepening depth-first search"], "judge": 3, "n_judges": 1, "judges_agree": true}
+{"sid": "P0636", "label": "ASTAR", "faithful": true, "note": "", "names_used": [], "judge": 4, "n_judges": 1, "judges_agree": true}
+{"sid": "P0637", "label": "X1", "faithful": false, "note": "shared path popped on return; returned path omits the goal", "names_used": ["dfs"], "judge": 5, "n_judges": 1, "judges_agree": true}
+{"sid": "P0638", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"], "judge": 6, "n_judges": 1, "judges_agree": true}
+{"sid": "P0639", "label": "DFS", "faithful": true, "note": "visited never un-marked despite the name", "names_used": ["backtracking"], "judge": 7, "n_judges": 1, "judges_agree": true}
+{"sid": "P0640", "label": "BFS", "faithful": true, "note": "", "names_used": [], "judge": 0, "n_judges": 1, "judges_agree": true}
+{"sid": "P0641", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"], "judge": 1, "n_judges": 1, "judges_agree": true}
+{"sid": "P0642", "label": "X1", "faithful": true, "note": "", "names_used": [], "judge": 2, "n_judges": 1, "judges_agree": true}

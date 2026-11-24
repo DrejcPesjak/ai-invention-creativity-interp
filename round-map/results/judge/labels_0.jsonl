@@ -1,0 +1,86 @@
+{"sid": "P0160", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0280", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0304", "label": "RANDOM", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0608", "label": "ASTAR", "faithful": true, "note": "heap key steps+manhattan; visited marked on push", "names_used": []}
+{"sid": "P0168", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"]}
+{"sid": "P0312", "label": "DIJK", "faithful": true, "note": "heap key is len(path) = steps only", "names_used": ["best-first search"]}
+{"sid": "P0504", "label": "X1", "faithful": true, "note": "recursive search that removes cell from visited on return", "names_used": ["random walk", "backtracking", "dfs"]}
+{"sid": "P0360", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0416", "label": "RELAX", "faithful": false, "note": "not Floyd-Warshall: single-source grid sweeps repeated only `rows` times (not until convergence), path via prev links; long paths not fully relaxed", "names_used": ["floyd-warshall"]}
+{"sid": "P0640", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0400", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0136", "label": "WAVE", "faithful": true, "note": "layered distance fill from goal, then descent walk from start", "names_used": ["bfs"]}
+{"sid": "P0296", "label": "BIDIR", "faithful": false, "note": "next_front is never assigned back to a frontier (only swapped), and meeting test always checks cameB even when expanding B", "names_used": []}
+{"sid": "P0592", "label": "RELAX", "faithful": true, "note": "", "names_used": ["dijkstra"]}
+{"sid": "P0512", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0344", "label": "BFS", "faithful": false, "note": "FIFO distance fill from start, then a second BFS from goal whose visit order is returned as the path; prev links never used", "names_used": ["bfs"]}
+{"sid": "P0632", "label": "BIDIR", "faithful": false, "note": "new_front is never assigned back to a frontier (only swapped), and meeting test always checks cameB even when expanding B", "names_used": []}
+{"sid": "P0328", "label": "OTHER", "faithful": true, "note": "mixture: heap (steps-only, Dijkstra) distance fill from goal, then FIFO BFS from start restricted to decreasing distances with predecessor links", "names_used": ["dijkstra", "bfs"]}
+{"sid": "P0112", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0464", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0368", "label": "DFS", "faithful": false, "note": "visited never un-marked (so DFS, not backtracking); returned path omits the start cell", "names_used": ["backtracking"]}
+{"sid": "P0184", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0552", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": []}
+{"sid": "P0232", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0456", "label": "IDDFS", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated; also no cycle check at all", "names_used": ["dfs"]}
+{"sid": "P0032", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0568", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0496", "label": "OTHER", "faithful": false, "note": "iterative path-stack walk with visited; on dead end pops and un-marks the wrong cell (new top); never tests for goal, always returns [] or crashes", "names_used": []}
+{"sid": "P0624", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0576", "label": "WALL", "faithful": false, "note": "position+direction walker: go straight else rotate clockwise, blocked by a visited set so it spins forever when stuck; path omits start", "names_used": ["wall follower"]}
+{"sid": "P0144", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0208", "label": "ASTAR", "faithful": true, "note": "", "names_used": ["a*"]}
+{"sid": "P0616", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0487", "label": "WALL", "faithful": false, "note": "position+direction walker (straight else rotate clockwise); after a blocked move the same cell is seen as visited and it returns []", "names_used": []}
+{"sid": "P0008", "label": "WALL", "faithful": false, "note": "straight-else-turn-right walker with visited set; backtrack branch assigns r,c = path[-2],path[-1] (tuples) and logic is incoherent", "names_used": ["wall follower"]}
+{"sid": "P0040", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0264", "label": "WAVE", "faithful": true, "note": "queue distance fill from start, descent walk from goal, no predecessor links", "names_used": []}
+{"sid": "P0152", "label": "DFS", "faithful": false, "note": "recursive DFS with permanent visited, but only tries directions with index >= incoming direction, so the search is incomplete", "names_used": ["wall follower"]}
+{"sid": "P0073", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0048", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"]}
+{"sid": "P0240", "label": "X1", "faithful": false, "note": "visited removed on return (backtracking); path already contains goal and goal is appended again, so goal is duplicated", "names_used": ["dfs"]}
+{"sid": "P0432", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0424", "label": "BFS", "faithful": true, "note": "no wall check on start/goal (edge-case slip)", "names_used": []}
+{"sid": "P0288", "label": "X1", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated in the result", "names_used": ["dfs"]}
+{"sid": "P0256", "label": "ASTAR", "faithful": false, "note": "key is parent's key + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": ["a*"]}
+{"sid": "P0128", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0600", "label": "IDDFS", "faithful": false, "note": "outer loop grows depth_limit but dfs never uses it; effectively plain 'not in path' backtracking (X1) repeated", "names_used": ["dfs", "depth limit"]}
+{"sid": "P0286", "label": "DFS", "faithful": false, "note": "stack DFS; path initialised as int 0 so path + [...] raises TypeError; odd no-reverse direction filter", "names_used": ["dfs"]}
+{"sid": "P0384", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"]}
+{"sid": "P0176", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0488", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0440", "label": "IDDFS", "faithful": false, "note": "limit is incremented together with the path on each recursive call so it never cuts off; effectively 'not in path' backtracking (X1); max depth only rows+cols", "names_used": ["iddfs", "iterative deepening", "dfs"]}
+{"sid": "P0320", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": []}
+{"sid": "P0520", "label": "WALL", "faithful": false, "note": "position+direction walker: forward else one right turn, gives up with [] if that is blocked too; no real wall-hugging order", "names_used": ["wall follower"]}
+{"sid": "P0024", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0016", "label": "WALL", "faithful": true, "note": "right/forward/left/back relative to facing with step budget; is_free lacks a bounds check (edge slip)", "names_used": []}
+{"sid": "P0000", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0192", "label": "RELAX", "faithful": true, "note": "", "names_used": ["bellman-ford"]}
+{"sid": "P0528", "label": "DEADEND", "faithful": true, "note": "dead-end filling then follow avoiding previous cell; can cycle forever when loops remain", "names_used": []}
+{"sid": "P0392", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0064", "label": "WAVE", "faithful": false, "note": "layer counter k is never initialised (UnboundLocalError)", "names_used": ["bfs"]}
+{"sid": "P0376", "label": "DFS", "faithful": false, "note": "recursive search with no visited record or path check at all; infinite recursion", "names_used": ["dfs"]}
+{"sid": "P0200", "label": "X1", "faithful": false, "note": "marks/un-marks by assigning into grid strings (TypeError on immutable str); start also duplicated in path", "names_used": ["dfs"]}
+{"sid": "P0480", "label": "IDDFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0224", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0248", "label": "WAVE", "faithful": true, "note": "queue distance fill from goal, then walk from start to smaller numbers", "names_used": ["dijkstra", "bfs"]}
+{"sid": "P0408", "label": "DIJK", "faithful": true, "note": "heap key is len(path) = steps only", "names_used": []}
+{"sid": "P0056", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0536", "label": "BFS", "faithful": false, "note": "FIFO queue of carried paths but no global visited set (only 'not in path'), so exponential blow-up", "names_used": ["bfs"]}
+{"sid": "P0352", "label": "X2", "faithful": false, "note": "initialises every pair of distinct free cells to distance 1 instead of only adjacent ones, so path jumps straight to goal", "names_used": ["floyd-warshall"]}
+{"sid": "P0120", "label": "DEADEND", "faithful": false, "note": "follow phase sets prev to the new cell instead of the old one, so it can step back and oscillate forever", "names_used": []}
+{"sid": "P0560", "label": "X1", "faithful": false, "note": "path starts as [start] and each call appends its own cell again, so start is duplicated in the result", "names_used": ["dfs"]}
+{"sid": "P0448", "label": "X1", "faithful": true, "note": "", "names_used": ["backtracking"]}
+{"sid": "P0272", "label": "IDDFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0104", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0573", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0080", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": []}
+{"sid": "P0472", "label": "ASTAR", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0584", "label": "WALL", "faithful": false, "note": "straight-else-rotate-clockwise walker; appends current cell on every iteration including pure turns, so path has duplicates; can loop forever", "names_used": ["wall follower"]}
+{"sid": "P0029", "label": "X2", "faithful": false, "note": "adjacency test compares (row_i, col_j) instead of cell j, so the edge set is wrong", "names_used": ["floyd-warshall"]}
+{"sid": "P0088", "label": "BFS", "faithful": false, "note": "path comes from a correct BFS with parent links, but a bogus 'Floyd-Warshall' loop on the rows x cols table runs first and returns [] (or errors) in most cases", "names_used": ["floyd-warshall", "bfs"]}
+{"sid": "P0336", "label": "X1", "faithful": false, "note": "path already contains the cell and goal is appended again on arrival, so goal is duplicated", "names_used": ["backtracking"]}
+{"sid": "P0216", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0096", "label": "GREEDY", "faithful": true, "note": "heap key (h, g): h compared first", "names_used": []}
+{"sid": "P0072", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0544", "label": "BFS", "faithful": true, "note": "", "names_used": []}

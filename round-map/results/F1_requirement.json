@@ -1,0 +1,29 @@
+{
+ "note": "Judged by the main judge from static facts over all 110 programs plus reading 1-2 programs per cell; not blind (the requirement must be known).",
+ "respects_of_10": {
+  "DFS": 0,
+  "IDDFS": 0,
+  "BIDIR": 0,
+  "ASTAR": 0,
+  "GREEDY": 0,
+  "DIJK": 0,
+  "WAVE": 0,
+  "RELAX": 0,
+  "DEADEND": 0,
+  "WALL": 1,
+  "RANDOM": 0
+ },
+ "why": {
+  "DFS": "all 10 have no imports and no queue (that clause is kept), but every one keeps a visited set or copies the path at each call, so memory is not proportional to the path",
+  "IDDFS": "10/10 BFS with a deque and a visited set",
+  "BIDIR": "10/10 one-directional BFS",
+  "ASTAR": "10/10 BFS, no use of the goal position",
+  "GREEDY": "10/10 BFS",
+  "DIJK": "8 BFS (3 add an unused get_cost stub), 2 backtracking; none could handle costs",
+  "WAVE": "9 BFS with carried paths, 1 backtracking; no numbers prepared",
+  "RELAX": "all use a stack, queue or recursion (4 are not usable programs)",
+  "DEADEND": "several try to write marks into the grid strings (crash) but as a visited record for DFS/backtracking; no dead-end filling",
+  "WALL": "1 program keeps only cell + direction (go straight, else rotate): respects the requirement, loops forever, fails tests; the rest are DFS/backtracking",
+  "RANDOM": "all 10 import random but only to shuffle neighbour order inside DFS/backtracking with a visited record"
+ }
+}

@@ -1,0 +1,9 @@
+{SPEC}
+
+Scoring: each time the code reads a cell of grid (indexing a row or iterating over it) counts as one read. The score of a solution is its average number of reads over the tests; lower is better.
+
+The current best solutions:
+
+{TOP}
+
+Write a different solve that passes the same tests and reads fewer cells.

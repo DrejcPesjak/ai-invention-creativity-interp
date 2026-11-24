@@ -1,0 +1,8 @@
+def _nb(grid, c):
+    R, C = len(grid), len(grid[0])
+    for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+        r, k = c[0] + dr, c[1] + dc
+        if 0 <= r < R and 0 <= k < C and grid[r][k] == '.':
+            yield (r, k)
+def _wall(grid, s, g):
+    return grid[s[0]][s[1]] == '#' or grid[g[0]][g[1]] == '#'

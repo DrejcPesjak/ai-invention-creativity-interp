@@ -1,0 +1,87 @@
+{"sid": "P0203", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0331", "label": "RANDOM", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0082", "label": "RANDOM", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0395", "label": "X2", "faithful": false, "note": "distance table never gets adjacency edges, so all pairs stay inf; reconstruction also wrong", "names_used": ["floyd-warshall"]}
+{"sid": "P0480", "label": "IDDFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0467", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0403", "label": "X1", "faithful": false, "note": "path carries start twice (dfs called with [start] and appends current cell again)", "names_used": ["dfs"]}
+{"sid": "P0475", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0003", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0051", "label": "RANDOM", "faithful": false, "note": "self-avoiding random walk that never checks for the goal; returns [] when stuck", "names_used": []}
+{"sid": "P0564", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0627", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0379", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0211", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0611", "label": "IDDFS", "faithful": false, "note": "outer growing-depth loop but limit test compares depth to len(path)+1, so limit never bites: depth=1 run is plain unbounded backtracking (X1 behaviour), later runs return at once", "names_used": ["dfs"]}
+{"sid": "P0595", "label": "IDDFS", "faithful": false, "note": "outer growing-depth loop but dfs always called with depth 1 and the limit test never triggers: plain backtracking (X1 behaviour) repeated", "names_used": ["dfs"]}
+{"sid": "P0019", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0235", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0547", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0075", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0499", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0123", "label": "IDDFS", "faithful": true, "note": "no cycle check at all, depth capped at 100", "names_used": ["dfs", "iddfs"]}
+{"sid": "P0363", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0043", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0323", "label": "DFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0117", "label": "RELAX", "faithful": false, "note": "grid sweeps relaxing distances from start, but a fixed number of sweeps (rows) instead of until no change; path via prev links; called Floyd-Warshall but is not", "names_used": ["floyd-warshall"]}
+{"sid": "P0115", "label": "GREEDY", "faithful": true, "note": "", "names_used": ["greedy best-first search"]}
+{"sid": "P0027", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0555", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0451", "label": "BFS", "faithful": false, "note": "path reconstruction stops before start, so returned path lacks the start cell", "names_used": ["bfs"]}
+{"sid": "P0091", "label": "WAVE", "faithful": false, "note": "walk indexes num[cell] with a tuple -> TypeError crash", "names_used": ["bfs"]}
+{"sid": "P0059", "label": "IDDFS", "faithful": true, "note": "exact-depth probes, depth capped at 99, no start-wall check", "names_used": ["dfs"]}
+{"sid": "P0139", "label": "X2", "faithful": false, "note": "distance table never gets adjacency edges, so all pairs stay inf; reconstruction also wrong", "names_used": ["floyd-warshall"]}
+{"sid": "P0187", "label": "DFS", "faithful": true, "note": "iterative DFS with the path as stack and permanent visited marks; comment calls it BFS", "names_used": ["bfs", "breadth-first search"]}
+{"sid": "P0171", "label": "WALL", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0483", "label": "DIJK", "faithful": true, "note": "key is path length (steps so far); comment calls it greedy best-first", "names_used": ["greedy best-first search"]}
+{"sid": "P0035", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0387", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0371", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0291", "label": "RELAX", "faithful": false, "note": "grid sweeps relaxing distances from start, but a fixed number of sweeps (rows) instead of until no change; path via prev links; called Floyd-Warshall but is not", "names_used": ["floyd-warshall"]}
+{"sid": "P0339", "label": "JUNK", "faithful": false, "note": "no search: scans grid and only appends cells already in path, so never finds anything", "names_used": ["bfs", "dfs"]}
+{"sid": "P0259", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0603", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0266", "label": "BIDIR", "faithful": false, "note": "meeting test joins paths of unrelated nodes (forward path + reversed path of whatever backward node was popped), giving broken paths", "names_used": ["bfs", "bidirectional search"]}
+{"sid": "P0155", "label": "BFS", "faithful": true, "note": "", "names_used": ["breadth-first search"]}
+{"sid": "P0635", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs", "iterative deepening depth-first search"]}
+{"sid": "P0563", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0131", "label": "IDDFS", "faithful": false, "note": "limit is decremented while path length also grows (double counting), no cycle check, depth capped at 99", "names_used": ["dfs"]}
+{"sid": "P0315", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0219", "label": "WALL", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0587", "label": "GREEDY", "faithful": true, "note": "heap key (h, g, cell): h compared first", "names_used": []}
+{"sid": "P0419", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0523", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0083", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0195", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"]}
+{"sid": "P0251", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0619", "label": "BFS", "faithful": false, "note": "FIFO search over (cell, facing) states with no predecessor links; path reconstruction loop never terminates (unfinished)", "names_used": ["bfs", "dfs"]}
+{"sid": "P0571", "label": "ASTAR", "faithful": false, "note": "priority = parent priority + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": []}
+{"sid": "P0275", "label": "IDDFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0002", "label": "BFS", "faithful": false, "note": "FIFO queue but no visited record at all: exponential, never terminates with cycles / no path", "names_used": ["bfs"]}
+{"sid": "P0515", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0227", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"]}
+{"sid": "P0347", "label": "BFS", "faithful": false, "note": "FIFO queue with carried paths but no global visited set, only 'not in path': enumerates all simple paths", "names_used": ["bfs"]}
+{"sid": "P0107", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0411", "label": "DIJK", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0435", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0531", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0443", "label": "ASTAR", "faithful": false, "note": "heap ordered by g+h but no predecessor links; path reconstruction is arithmetic nonsense", "names_used": []}
+{"sid": "P0427", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0579", "label": "ASTAR", "faithful": false, "note": "start pushed with coordinates (0,0) instead of start; priority accumulates h along the path", "names_used": ["a*"]}
+{"sid": "P0011", "label": "WAVE", "faithful": true, "note": "", "names_used": ["bfs", "breadth-first search"]}
+{"sid": "P0179", "label": "DEADEND", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0258", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0283", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0067", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0491", "label": "GREEDY", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0099", "label": "OTHER", "faithful": false, "note": "single walker with a facing direction: goes straight, rotates clockwise when blocked, and aborts on any revisit (so it gives up at the first turn); not a real wall follower", "names_used": []}
+{"sid": "P0243", "label": "X1", "faithful": false, "note": "path is built goal-first and returned without reversing (goal -> start order)", "names_used": ["dfs", "backtracking", "depth-first search"]}
+{"sid": "P0507", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs"]}
+{"sid": "P0307", "label": "BFS", "faithful": true, "note": "", "names_used": ["bfs"]}
+{"sid": "P0299", "label": "BFS", "faithful": true, "note": "", "names_used": []}
+{"sid": "P0459", "label": "X2", "faithful": false, "note": "Floyd-Warshall table has no adjacency edges so start-goal distance is always inf and it returns []; the BFS after it is never reached", "names_used": ["floyd-warshall", "bfs"]}
+{"sid": "P0539", "label": "ASTAR", "faithful": false, "note": "priority = parent priority + 1 + h, so heuristic values accumulate along the path instead of g + h", "names_used": ["a*"]}
+{"sid": "P0267", "label": "X1", "faithful": true, "note": "", "names_used": ["dfs", "backtracking"]}
+{"sid": "P0147", "label": "RELAX", "faithful": false, "note": "whole-grid sweeps writing distances, but not anchored at start or goal (first free cell gets 0); number walk can loop forever", "names_used": ["bfs"]}
+{"sid": "P0355", "label": "WAVE", "faithful": true, "note": "", "names_used": ["dijkstra", "bfs"]}
+{"sid": "P0163", "label": "DFS", "faithful": true, "note": "", "names_used": ["dfs"]}

@@ -1,0 +1,74 @@
+{
+ "listed_of_10": {
+  "BFS": 10,
+  "DFS": 10,
+  "DIJK": 10,
+  "ASTAR": 10,
+  "BIDIR": 8,
+  "GREEDY": 6,
+  "IDDFS": 3,
+  "WALL": 1,
+  "RANDOM": 1,
+  "WAVE": 0,
+  "RELAX": 0,
+  "DEADEND": 0,
+  "X1": 10,
+  "X2": 1
+ },
+ "lists_with": {
+  "BIDIR": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   6,
+   7,
+   9
+  ],
+  "GREEDY": [
+   0,
+   1,
+   2,
+   4,
+   6,
+   9
+  ],
+  "IDDFS": [
+   3,
+   4,
+   6
+  ],
+  "WALL": [
+   9
+  ],
+  "RANDOM": [
+   0
+  ],
+  "X1": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "X2": [
+   1
+  ]
+ },
+ "rules": "'Uniform-cost search' -> DIJK. 'Bidirectional BFS' -> BIDIR. 'Aastar' (list 5) -> ASTAR. 'Greedy algorithm using a heuristic to prioritize paths closer to the goal' (list 1) -> GREEDY. 'Randomized search to explore paths randomly' (list 0) -> RANDOM. Any 'backtracking ...' item separate from DFS -> X1.",
+ "extras": {
+  "X1": "recursive backtracking: in 10/10 lists as an item separate from DFS. A pure version (cells unmarked on the way back) is exponential, so it is treated like the catalogue's 'no' methods.",
+  "X2": "Floyd-Warshall ('Modified Floyd-Warshall algorithm for dynamic grid pathfinding', list 1): a real all-pairs shortest-path algorithm that can solve the task; O(n^3) over up to 900 cells, so a pure version runs out of time on the large cases ('no' method). Extras are carried through C and E; no F1 requirement was written for them."
+ },
+ "other_items_not_carried": {
+  "Welsh-Powell (lists 0,2,6) / 'Welsh-Park' (lists 1,7)": "Welsh-Powell is a graph-colouring algorithm and 'Welsh-Park' does not exist: confabulations, in 5 of 10 lists. Not carried.",
+  "flood fill (list 5)": "'mark reachable cells and reconstruct the path': nearest to WAVE but no distances are mentioned; as stated it is BFS/DFS. Not counted for WAVE.",
+  "implementation details": "'modified DFS with pruning', 'visited set / cycle detection', 'memoization', 'queue or stack', 'dictionary of previous cells', 'priority queue' -> not methods."
+ }
+}

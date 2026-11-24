@@ -1,0 +1,41 @@
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 4/398 [00:00<00:10, 36.38it/s]Loading weights:  11%|█         | 44/398 [00:00<00:01, 241.17it/s]Loading weights:  20%|██        | 80/398 [00:00<00:01, 291.90it/s]Loading weights:  29%|██▊       | 114/398 [00:00<00:00, 309.32it/s]Loading weights:  37%|███▋      | 148/398 [00:00<00:00, 319.44it/s]Loading weights:  47%|████▋     | 187/398 [00:00<00:00, 342.82it/s]Loading weights:  56%|█████▌    | 223/398 [00:00<00:00, 346.84it/s]Loading weights:  65%|██████▍   | 258/398 [00:00<00:00, 337.81it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 453.90it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+PROMPT TAIL: ' one ```python code block containing the function solve and any helpers, with no example usage and no explanation.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+{'precision': 'bf16off', 'load_s': 4.8, 'vram_after_load_gb': 5.42, 'batch8_s': 116.6, 'steps': 266, 'steps_per_s': 2.3, 'vram_peak_gb': 6.05, 'usable': True}
+/home/drew99/IJS/ai-invention-creativity-interp/round-map/results/stage0.jsonl: 0 done, 10 to do
+  batch 1/1 131s (total 132s) max_new=297
+{
+ "tried": [
+  {
+   "precision": "bf16off",
+   "load_s": 4.8,
+   "vram_after_load_gb": 5.42,
+   "batch8_s": 116.6,
+   "steps": 266,
+   "steps_per_s": 2.3,
+   "vram_peak_gb": 6.05,
+   "usable": true
+  }
+ ],
+ "precision": "bf16off",
+ "model": "Qwen/Qwen3-4B",
+ "base": "Qwen/Qwen3-4B-Base",
+ "seed": 1000,
+ "gpu_budget": "5800MiB",
+ "n_pass_core46": 9,
+ "n_pass_strict48": 0,
+ "gen_s_for_10": 132.3,
+ "vram_peak_gb": 6.24,
+ "gate_passed_core46": true,
+ "gate_passed_strict48": false
+}
+S0-0 46 11010000 237 []
+S0-1 46 11010000 284 []
+S0-2 46 11010000 237 []
+S0-3 46 11010000 266 []
+S0-4 0 00010000 297 [['one_by_one_free', "load: SyntaxError: '(' was never closed (<candidate>, line 26)"], ['two_by_two_open', "load: SyntaxError: '(' was never closed (<candidate>, line 26)"]]
+S0-5 46 11010000 258 []
+S0-6 46 11010000 253 []
+S0-7 46 11010000 285 []
+S0-8 46 11010000 244 []
+S0-9 46 11010000 286 []

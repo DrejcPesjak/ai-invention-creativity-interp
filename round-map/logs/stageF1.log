@@ -1,0 +1,14 @@
+wrote 11 prompts for stage F1
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<00:40,  9.69it/s]Loading weights:   9%|▉         | 35/398 [00:00<00:01, 198.68it/s]Loading weights:  17%|█▋        | 69/398 [00:00<00:01, 250.31it/s]Loading weights:  28%|██▊       | 110/398 [00:00<00:00, 310.40it/s]Loading weights:  36%|███▋      | 145/398 [00:00<00:00, 322.37it/s]Loading weights:  45%|████▌     | 180/398 [00:00<00:00, 330.20it/s]Loading weights:  54%|█████▍    | 214/398 [00:00<00:00, 330.95it/s]Loading weights:  63%|██████▎   | 251/398 [00:00<00:00, 342.26it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 447.50it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+/home/drew99/IJS/ai-invention-creativity-interp/round-map/results/stageF1.jsonl: 0 done, 110 to do
+  batch 1/10 217s (total 271s) max_new=448
+  batch 2/10 208s (total 592s) max_new=431
+  batch 3/10 122s (total 759s) max_new=283
+  batch 4/10 135s (total 895s) max_new=286
+  batch 5/10 137s (total 1033s) max_new=288
+  batch 6/10 223s (total 1257s) max_new=516
+  batch 7/10 208s (total 1475s) max_new=426
+  batch 8/10 160s (total 1686s) max_new=330
+  batch 9/10 157s (total 1888s) max_new=329
+  batch 10/10 127s (total 2015s) max_new=297

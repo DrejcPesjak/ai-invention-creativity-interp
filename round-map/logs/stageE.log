@@ -1,0 +1,53 @@
+wrote 52 prompts for stage E
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   1%|          | 4/398 [00:00<00:09, 39.88it/s]Loading weights:  10%|▉         | 38/398 [00:00<00:01, 214.33it/s]Loading weights:  19%|█▉        | 77/398 [00:00<00:01, 293.20it/s]Loading weights:  28%|██▊       | 113/398 [00:00<00:00, 317.09it/s]Loading weights:  37%|███▋      | 147/398 [00:00<00:00, 324.98it/s]Loading weights:  45%|████▌     | 181/398 [00:00<00:00, 329.29it/s]Loading weights:  56%|█████▌    | 221/398 [00:00<00:00, 351.43it/s]Loading weights:  65%|██████▍   | 257/398 [00:00<00:00, 344.42it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 459.21it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+/home/drew99/IJS/ai-invention-creativity-interp/round-map/results/stageE.jsonl: 0 done, 520 to do
+  batch 1/44 127s (total 203s) max_new=289
+  batch 2/44 139s (total 428s) max_new=321
+  batch 3/44 200s (total 646s) max_new=466
+  batch 4/44 112s (total 835s) max_new=259
+  batch 5/44 119s (total 1004s) max_new=276
+  batch 6/44 115s (total 1128s) max_new=266
+  batch 7/44 128s (total 1281s) max_new=297
+  batch 8/44 133s (total 1419s) max_new=307
+  batch 9/44 119s (total 1602s) max_new=276
+  batch 10/44 119s (total 1731s) max_new=276
+  batch 11/44 145s (total 1909s) max_new=305
+  batch 12/44 126s (total 2121s) max_new=291
+  batch 13/44 183s (total 2305s) max_new=427
+  batch 14/44 162s (total 2469s) max_new=377
+  batch 15/44 125s (total 2609s) max_new=289
+  batch 16/44 155s (total 2799s) max_new=360
+  batch 17/44 126s (total 3011s) max_new=268
+  batch 18/44 130s (total 3150s) max_new=302
+  batch 19/44 186s (total 3384s) max_new=389
+  batch 20/44 179s (total 3565s) max_new=376
+  batch 21/44 140s (total 3864s) max_new=323
+  batch 22/44 158s (total 4064s) max_new=333
+  batch 23/44 217s (total 4324s) max_new=451
+  batch 24/44 241s (total 4711s) max_new=495
+  batch 25/44 176s (total 4928s) max_new=370
+  batch 26/44 210s (total 5202s) max_new=490
+  OOM at batch 12: splitting
+  batch 27/44 936s (total 6308s) max_new=700
+  batch 28/44 174s (total 6535s) max_new=364
+  batch 29/44 268s (total 6804s) max_new=625
+  batch 30/44 276s (total 7124s) max_new=560
+  batch 31/44 287s (total 7478s) max_new=577
+  batch 32/44 250s (total 7904s) max_new=581
+  OOM at batch 12: splitting
+  batch 33/44 683s (total 8675s) max_new=641
+  batch 34/44 183s (total 9030s) max_new=373
+  batch 35/44 183s (total 9403s) max_new=373
+  batch 36/44 263s (total 9688s) max_new=524
+  batch 37/44 167s (total 9980s) max_new=338
+  batch 38/44 189s (total 10293s) max_new=381
+  batch 39/44 265s (total 10559s) max_new=522
+  OOM at batch 12: splitting
+  batch 40/44 860s (total 11567s) max_new=700
+  OOM at batch 12: splitting
+  batch 41/44 787s (total 12359s) max_new=589
+  batch 42/44 251s (total 12652s) max_new=480
+  OOM at batch 12: splitting
+  batch 43/44 628s (total 13486s) max_new=532
+  batch 44/44 230s (total 13779s) max_new=541

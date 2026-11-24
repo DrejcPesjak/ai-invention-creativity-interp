@@ -1,0 +1,13 @@
+# Python byte-code
+__pycache__/
+*.pyc
+
+# Abandoned 8-bit run: probabilities were batch-dependent, nothing in the README uses it
+results/8bit_run/
+logs/8bit_run/
+
+# Judging chunks: shuffled copies of results/judging_sheet.jsonl handed to the judges
+results/judge/chunk_*.jsonl
+
+# Stage D working files between passes; the tree itself is in stageD_points/leaves/rollouts.jsonl
+results/D/

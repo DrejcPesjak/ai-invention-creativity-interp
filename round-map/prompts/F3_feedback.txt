@@ -1,0 +1,7 @@
+step 1: {SPEC}
+
+same signature as attempt k: Rejected: this works the same way as your attempt #{k}. Write a solution that works in a fundamentally different way.
+
+fails tests: Rejected: it fails the tests ({n} of 46 pass). Fix it or try another approach.
+
+new signature and passes: Accepted. Now write another solution that works in a fundamentally different way from all your previous ones.

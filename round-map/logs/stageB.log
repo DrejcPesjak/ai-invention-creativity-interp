@@ -1,0 +1,5 @@
+wrote 1 prompts for stage B
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<00:43,  9.17it/s]Loading weights:  10%|▉         | 38/398 [00:00<00:01, 211.89it/s]Loading weights:  20%|█▉        | 78/398 [00:00<00:01, 294.92it/s]Loading weights:  28%|██▊       | 113/398 [00:00<00:00, 315.35it/s]Loading weights:  37%|███▋      | 147/398 [00:00<00:00, 322.87it/s]Loading weights:  45%|████▌     | 181/398 [00:00<00:00, 327.57it/s]Loading weights:  55%|█████▌    | 220/398 [00:00<00:00, 347.61it/s]Loading weights:  64%|██████▍   | 256/398 [00:00<00:00, 350.55it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 455.10it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+/home/drew99/IJS/ai-invention-creativity-interp/round-map/results/stageB.jsonl: 0 done, 10 to do
+  batch 1/1 91s (total 91s) max_new=205

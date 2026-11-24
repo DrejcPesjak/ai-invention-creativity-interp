@@ -1,0 +1,12 @@
+refs {'astar_fg.py': 362.2608695652174, 'bfs_deque_parent.py': 686.304347826087, 'bfs_listpop_pathcarry.py': 660.2826086956521, 'bibfs_deques.py': 534.7826086956521, 'bibfs_sets.py': 461.80434782608694, 'dfs_recursive.py': 444.60869565217394, 'dfs_stack.py': 570.7173913043479, 'dijkstra_counter.py': 683.195652173913, 'dijkstra_lazy.py': 684.695652173913, 'gbfs_counter.py': 176.3695652173913, 'iddfs_iterative.py': 40855.80434782609, 'iddfs_recursive.py': 44064.32608695652}
+round 0 top [('A_unprompted-3', 658.4130434782609), ('A_unprompted-5', 658.4130434782609), ('A_unprompted-13', 658.4130434782609)]
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights:   0%|          | 1/398 [00:00<00:49,  7.94it/s]Loading weights:  11%|█         | 44/398 [00:00<00:01, 231.16it/s]Loading weights:  20%|██        | 80/398 [00:00<00:01, 284.95it/s]Loading weights:  29%|██▊       | 114/398 [00:00<00:00, 304.47it/s]Loading weights:  37%|███▋      | 146/398 [00:00<00:00, 307.32it/s]Loading weights:  45%|████▌     | 181/398 [00:00<00:00, 319.47it/s]Loading weights:  56%|█████▌    | 223/398 [00:00<00:00, 349.95it/s]Loading weights:  65%|██████▌   | 259/398 [00:00<00:00, 343.17it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 446.15it/s]
+Some parameters are on the meta device because they were offloaded to the cpu.
+round 1: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 2: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 3: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 4: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 5: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 6: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 7: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
+round 8: valid 8/8, top [('A_unprompted-3', 658.4), ('A_unprompted-5', 658.4), ('A_unprompted-13', 658.4)]
